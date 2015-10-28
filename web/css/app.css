@@ -6,7 +6,37 @@ h1 {
 	font-size: 2em;
 	color:	#acfe5e;
 }
+.entete{
+	width: 80%;
+	height: auto;
+	display: block;
+	box-shadow: 6px 9px 0px blue;
+	border-radius: 5px;
+	background-color: #7ACC6A;
+}
+
 #imp {
 	text-align: center;
+	color: black;
+	border: 2px red solid;
+	background-color: #FF3300;
 	font-family: Comic Sans MS,arial ;
+}
+div{
+	border: 1px blue solid;
+	background-color: #CCCCB2;
+}
+a{
+	color: black;
+}
+/* pseudo format hover, active, */
+a:hover{
+	color: white;
+	text-decoration: none;
+}
+a:active{
+
+}
+a:focus {
+	background-color: #FFCC66:
 }

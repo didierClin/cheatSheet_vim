@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vim L'editeur modal performant?</title>
+    <script type="text/javascript" src="js/app.js"></script>
+    <link href="web/css/app.css" rel="stylesheet" type="text/css"  />
+  </head>
+  <body>
+    <div class="logo">
+      <img src="web/img/vim_editor.gif" alt="logo de Vim"/><h1> l'éditeur modal ultra-puissant !</h1>
+
+    </div>
+
+    Les trois modes principaux de vi : <br/>
+    <ul>
+	<li><em>le mode normal</em>C'est le mode par defaut à l'ouverture de vim. Il permet de se déplacer dans le fichier.</li>
+
+      <li><em>Le mode commande</em>: Dans ce mode on donne des instructions à Vim. Editer, sauvegarder, quitter,..</li>
+      <li><em>Le mode insertion</em>: permet d'inserer le texte et son formatage.</li>
+    </ul>
+    <div>
+    <h3>le mode normal :</h3>
+    C'est le mode par defaut à l'ouverture de vim.<br/> <span id="imp">La touche 'echap' nous ramene dans ce mode.</span>
+	Naviguer dans le texte:
+    <ul>
+      <li>h, l : déplacement respectif à gauche ou a droite,</li>
+      <li>j, k : déplacement respectif en haut ou vers le bas,<br/>
+      nb: les touches fleches haut, bas, gauche et droite ont les memes actions.</li>
+      <li>gg : va au debut du texte, G : va à la fin du texte,</li>
+      <li>0 : va au debut de la ligne, $ : va à la fin de la ligne,</li>
+      <li>{ : va au début du paragraphe, } : va à la fin du paragraphe,</li>
+      <li>
+      <li>w : avance d'un mot, b : recule d'un mot</li>
+      <li>e : avance jusqu'à la fin d'un mot, </li>
+    </ul>
+    Effacement:
+	<ul>
+      <li>x : supprime le caractère sous le curseur</li>
+      <li>X : supprime le caractère précedent le curseur,</li>
+      <li>d : supprime ..</li>
+      <li>dw : supprime le mot sous le cursuer,</li>
+      <li>d$ : supprime depuis le curseur jusqu'en fin de ligne,</li>
+      <li></li>
+	</ul>
+    <h3>le mode commande :</h3>
+
+    Pour saisir une commande, taper ':' suivi d'une commande.
+    les touches principales:
+    <ul>
+      <li>w : sauvegarde du fichier</li>
+      <li>q : quitter le fichier sans sauvegarde, une alerte apparait si le fichier est modifié</li>
+      <li>q! : forcer la sortie du fichier sans sauvegarde, evite une alerte </li>
+      <li>wq ou x : enregistrer le fichier et sortir de vim,</li>
+      <li>e mon_fich : éditer le fichier mon_fich, mon_fich sera créé si il n'existe pas,</li>
+    </ul>
+
+    <h3>le mode insertion:</h3>
+    </div>
+  </body>
+</html>

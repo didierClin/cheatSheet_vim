@@ -7,36 +7,28 @@
     <link href="web/css/app.css" rel="stylesheet" type="text/css"  />
   </head>
   <body>
-    <div class="logo">
-      <img src="web/img/vim_editor.gif" alt="logo de Vim"/><h1> l'éditeur modal ultra-puissant !</h1>
-
-      <nav class="menu">
-        <ul>
-          <li><a href="#MN">Le mode normal</a></li>
-          <li><a href="#MC">Le mode commande</a></li>
-          <li><a href="#MI">Le mode insertion</a></li>
-          <li><a href="#PV">Le mode insertion</a></li>
-          <li></li>
-          <li></li>
-          <li id=""></li>
+    <header class="logo">
+      <img src="web/img/vim_editor.gif" alt="logo de Vim"/>
+    </header>
+    <nav>
+        <ul class="menu">
+          <li><a href="#MN">Mode normal</a></li>
+          <li><a href="#MC">Mode commande</a></li>
+          <li><a href="#MI">Mode insertion</a></li>
+          <li><a href="#PV">Aller plus vite</a></li>
           <li></li>
         </ul>
-      </nav>
+    </nav>
 
-    </div>
-    <div class="entete">
-        Les trois modes principaux de vi : <br/>
-        <ul>
-    	     <li><em>mode normal</em>: C'est le mode par defaut à l'ouverture de vim. Il permet de se déplacer dans le fichier.</li>
-           <li><em>mode commande</em>: Dans ce mode on donne des instructions à Vim. Editer, sauvegarder, quitter,..</li>
-           <li><em>mode insertion</em>: permet d'inserer le texte et son formatage.</li>
-        </ul>
-   </div>
+    <section>
+        <p class="entete">
+             L'éditeur modal ultra-puissant !<br/>
+       </p>
    <div>
-    <h3 id="MN">le mode normal :</h3>
-      C'est le mode par defaut à l'ouverture de vim.<br/>
+    <h2 id="MN">le mode normal :</h2>
+      C'est le mode par defaut à l'ouverture de vim. Il permet de se déplacer dans le fichier.<br/>
      <span id="imp">/!\ La touche 'echap' nous ramene dans ce mode.</span><br/>
-	    Naviguer dans le texte:
+	    <h3>Naviguer dans le texte:</h3>
       <ul>
         <li>h, l : déplacement respectif à gauche ou a droite,</li>
         <li>j, k : déplacement respectif en haut ou vers le bas,<br/>
@@ -48,7 +40,7 @@
         <li>w : avance d'un mot, b : recule d'un mot</li>
         <li>e : avance jusqu'à la fin d'un mot, </li>
       </ul>
-    Effacement:
+    <h3>Effacement:</h3>
 	<ul>
       <li>x : supprime le caractère sous le curseur</li>
       <li>X : supprime le caractère précedent le curseur,</li>
@@ -60,8 +52,8 @@
 	</ul>
 </div>s
   <div id="MC">
-    <h3>le mode commande :</h3>
-
+    <h2>le mode commande :</h2>
+Dans ce mode on donne des instructions à Vim. Editer, sauvegarder, quitter,..<br/>
     Pour saisir une commande, taper <em>':'</em> suivi d'une commande.
     les touches principales:
     <ul>
@@ -74,7 +66,7 @@
 </div>
 <div id="MI">
     <h3>le mode insertion:</h3>
-	<p>
+	<p>permet d'inserer le texte et son formatage.<br/>
 		Méthodes pour entrer en mode insertion:
 <ul>
 <li>i: on entre en mode 'Insertion' à l'emplacement actuel du curseur,</li>

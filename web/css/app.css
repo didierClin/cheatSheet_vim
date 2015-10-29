@@ -2,24 +2,50 @@
 	font-size: 1em;
 	color: #2243cc;
 }
-h1 {
-	font-size: 2em;
-	color:	#acfe5e;
-}
 .logo{
 	display: inline-block;
 	float: left;
 }
+.menu{
+	display: inline;
+	list-style: none;
+	float: left;
+}
+li {
+	display: inline;
+	color: #000;
+}
+h1 {
+	font-size: 2em;
+	color:	#277A0A;
+}
+section{
+	clear: both;
+	width: 80%
+	padding-top: 20px;
+	padding-bottom: 40px;
+}
 .entete{
 	clear: both;
+	font-size: 2em;
+	text-align: center;
+	text-shadow: 2px 2px green;
 	width: 80%;
+	padding-top: 20px;
+	padding-bottom: 40px;
+	margin: auto;
 	height: auto;
 	display: block;
 	box-shadow: 6px 9px 2px blue;
 	border-radius: 5px;
 	background-color: #7ACC6A;
 }
+#MN{
+	color: #FFF;
 
+	margin: auto;
+	text-o
+}
 #imp {
 	text-align: center;
 	color: black;
@@ -29,12 +55,10 @@ h1 {
 }
 div{
 	border: 1px blue solid;
+	margin-top: auto;
 	background-color: #CCCCB2;
 }
-.menu{
-	text-decoration: none;
-	display: inline-block;
-}
+
 a{
 	color: black;
 }

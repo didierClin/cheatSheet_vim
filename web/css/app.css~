@@ -7,7 +7,7 @@ h1 {
 	color:	#acfe5e;
 }
 .logo{
-	display: inline-block;
+	display: inline;
 	float: left;
 }
 .entete{
@@ -15,7 +15,7 @@ h1 {
 	width: 80%;
 	height: auto;
 	display: block;
-	box-shadow: 6px 9px 2px blue;
+	box-shadow: 6px 9px 0px blue;
 	border-radius: 5px;
 	background-color: #7ACC6A;
 }
@@ -33,7 +33,7 @@ div{
 }
 .menu{
 	text-decoration: none;
-	display: inline-block;
+	display: inline;
 }
 a{
 	color: black;

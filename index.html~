@@ -10,7 +10,7 @@
     <div class="logo">
       <img src="web/img/vim_editor.gif" alt="logo de Vim"/><h1> l'éditeur modal ultra-puissant !</h1>
 
-      <nav class="menu">
+      <nav class="nav">
         <ul>
           <li><a href="#MN">Le mode normal</a></li>
           <li><a href="#MC">Le mode commande</a></li>

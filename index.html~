@@ -7,110 +7,104 @@
     <link href="web/css/app.css" rel="stylesheet" type="text/css"  />
   </head>
   <body>
-    <div class="logo">
-      <img src="web/img/vim_editor.gif" alt="logo de Vim"/><h1> l'éditeur modal ultra-puissant !</h1>
-
-      <nav class="nav">
-        <ul>
-          <li><a href="#MN">Le mode normal</a></li>
-          <li><a href="#MC">Le mode commande</a></li>
-          <li><a href="#MI">Le mode insertion</a></li>
-          <li><a href="#PV">Le mode insertion</a></li>
-          <li></li>
-          <li></li>
-          <li id=""></li>
+    <header class="logo">
+      <img src="web/img/vim_editor.gif" alt="logo de Vim"/>
+    </header>
+    <nav>
+        <ul class="menu">
+          <li><a href="#MN">Mode normal</a></li>
+          <li><a href="#MC">Mode commande</a></li>
+          <li><a href="#MI">Mode insertion</a></li>
+          <li><a href="#PV">Aller plus vite</a></li>
           <li></li>
         </ul>
-      </nav>
+    </nav>
 
-    </div>
-    <div class="entete">
-        Les trois modes principaux de vi : <br/>
-        <ul>
-    	     <li><em>mode normal</em>: C'est le mode par defaut à l'ouverture de vim. Il permet de se déplacer dans le fichier.</li>
-           <li><em>mode commande</em>: Dans ce mode on donne des instructions à Vim. Editer, sauvegarder, quitter,..</li>
-           <li><em>mode insertion</em>: permet d'inserer le texte et son formatage.</li>
-        </ul>
-   </div>
+    <section>
+        <p class="entete">
+             L'éditeur modal ultra-puissant !<br/>
+       </p>
    <div>
-    <h3 id="MN">le mode normal :</h3>
-      C'est le mode par defaut à l'ouverture de vim.<br/>
+    <h2 id="MN">le mode normal :</h2>
+    <p>
+      C'est le mode par defaut à l'ouverture de vim. Il permet de se déplacer dans le fichier.
+      </p> 
      <span id="imp">/!\ La touche 'echap' nous ramene dans ce mode.</span><br/>
-	    Naviguer dans le texte:
-      <ul>
-        <li>h, l : déplacement respectif à gauche ou a droite,</li>
-        <li>j, k : déplacement respectif en haut ou vers le bas,<br/>
-          nb: les touches fleches haut, bas, gauche et droite ont les memes actions.</li>
-        <li>gg : va au debut du texte, G : va à la fin du texte,</li>
-        <li>0 : va au debut de la ligne, $ : va à la fin de la ligne,</li>
-        <li>{ : va au début du paragraphe, } : va à la fin du paragraphe,</li>
-        <li>
-        <li>w : avance d'un mot, b : recule d'un mot</li>
-        <li>e : avance jusqu'à la fin d'un mot, </li>
-      </ul>
-    Effacement:
-	<ul>
-      <li>x : supprime le caractère sous le curseur</li>
-      <li>X : supprime le caractère précedent le curseur,</li>
-      <li>d : supprime ..</li>
-      <li>dw : supprime le mot sous le cursuer,</li>
-      <li>d$ : supprime depuis le curseur jusqu'en fin de ligne,</li>
-      <li>d0 : supprime depuis le début de ligne jusqu'au curseur,</li>
-      <li></li>
-	</ul>
-</div>s
+	    <h3>Naviguer dans le texte:</h3>
+      <dl>
+	      <dt>h, l </dt><dd> déplacement respectif à gauche ou a droite,</dd>
+	      <dt>j, k </dt><dd> déplacement respectif en haut ou vers le bas,<dd/>
+	      <dd>nb: les touches fleches haut, bas, gauche et droite ont les memes actions.</dd>
+	  <dt>gg </dt><dd> va au debut du texte, G : va à la fin du texte,</dd>
+	  <dt>0 </dt><dd> va au debut de la ligne, $ : va à la fin de la ligne,</dd>
+	  <dt>{ </dt><dd> va au début du paragraphe, } : va à la fin du paragraphe,</dd>
+        <dt>
+	<dt>w </dt><dd> avance d'un mot, b : recule d'un mot</dd>
+	<dt>e </dt><dd> avance jusqu'à la fin d'un mot, </dd>
+      </dl>
+    <h3>Effacement:</h3>
+	<dl>
+		<dt>x </dt><dd> supprime le caractère sous le curseur</dd>
+		<dt>X </dt><dd> supprime le caractère précedent le curseur,</dd>
+		<dt>d </dt><dd> supprime ..</dd>
+		<dt>dw </dt><dd> supprime le mot sous le curseur,</dd>
+		<dt>d$ </dt><dd> supprime depuis le curseur jusqu'en fin de ligne,</dd>
+      		<dt>d0 </dt><dd> supprime depuis le début de ligne jusqu'au curseur,</dd>
+	</dl>
+</div>
   <div id="MC">
-    <h3>le mode commande :</h3>
-
-    Pour saisir une commande, taper <em>':'</em> suivi d'une commande.
+    <h2>le mode commande :</h2>
+	<p>Dans ce mode on donne des instructions à Vim. Editer, sauvegarder, quitter,..</p>
+	<p>Pour saisir une commande, taper <em>':'</em> suivi d'une commande.</p>
     les touches principales:
-    <ul>
-      <li>w : (write) Sauvegarde du fichier</li>
-      <li>q : (quit)  quitter le fichier sans sauvegarde, une alerte apparait si le fichier est modifié et nécessite une confirmation (!)</li>
-      <li>q! : forcer la sortie du fichier sans sauvegarde, evite une alerte </li>
-      <li>wq ou x : enregistrer le fichier et sortir de vim,</li>
-      <li>e mon_fich : éditer le fichier mon_fich, mon_fich sera créé si il n'existe pas,</li>
-    </ul>
+    <dl>
+	    <dt>w </dt><dd> (write) Sauvegarde du fichier</dd>
+	    <dt>q </dt><dd> (quit)  quitter le fichier sans sauvegarde, une alerte</dd>
+      <dd> apparait si le fichier est modifié et nécessite une confirmation (!)</dd>
+      <dt>q! </dt><dd> forcer la sortie du fichier sans sauvegarde, evite une alerte </dd>
+      <dt>wq ou x </dt><dd> enregistrer le fichier et sortir de vim,</dd>
+      <dt>e mon_fich </dt><dd> éditer le fichier mon_fich, mon_fich sera créé si il n'existe pas,</dd>
+    </dl>
 </div>
 <div id="MI">
     <h3>le mode insertion:</h3>
-	<p>
-		Méthodes pour entrer en mode insertion:
-<ul>
-<li>i: on entre en mode 'Insertion' à l'emplacement actuel du curseur,</li>
-<li>a: mode 'Append', le curseur avance d'un caratère, </li>
-<li>A: mode 'Append', ajout en fin de ligne,</li>
-<li>o: 'Append' ouvre une nouvelle ligne en dessous de la ligne actuelle,</li>
-<li>O: 'Append' ouvre une nouvelle ligne au dessus de la ligne actuelle,</li>
-<li>c: 'change'</li>
-<li></li>
-</ul>
+	<p>permet d'inserer le texte et son formatage.<br/>
+	Méthodes pour entrer en mode insertion:</p>
+<dl>
+	<dt>i</dt><dd> on entre en mode 'Insertion' à l'emplacement actuel du curseur,</dd>
+	<dt>a</dt><dd> mode 'Append', le curseur avance d'un caratère, </dd>
+	<dt>A</dt><dd> mode 'Append', ajout en fin de ligne,</dd>
+	<dt>o</dt><dd> 'Append' ouvre une nouvelle ligne en dessous de la ligne actuelle,</dd>
+	<dt>O</dt><dd> 'Append' ouvre une nouvelle ligne au dessus de la ligne actuelle,</dd>
+	<dt>c</dt><dd> 'change'</dd>
+</dl>
 	</p>
   </div>
 <div id="PV">
     <h3>Aller plus Viiitttteeee!!!</h3>
 	<p>
 	Répéter la dernière commande:<br/>
-	'.' permet de reproduire la dernière commande.
-	dw supprime un mot complet, chaque appui sur la touche '.' va supprimer de nouveau un mot.
-		Associer les opérateurs et les mouvements:<br/>
+	'.' permet de reproduire la dernière commande.<br/>
+	&gt;dw supprime un mot complet, chaque appui sur la touche '.' va supprimer de nouveau un mot.</p>
+	<p>Associer les commandes:<br/>
+	&gt;xp : x pour supprimer un caractère, p pour le coller =&gt; xp inverse deux caractères</p>
+	<p>Associer les opérateurs et les mouvements:<br/>
 une commande peut etre précédée d'un nombre qui va multiplier l'effet de la commande.
-par exemple, '10w' va déplacer le curseur sur le dixième mot suivant.
+	&gt; '10w' va déplacer le curseur sur le dixième mot suivant.
 </p>
 <p>On peut associer opérateur mouvement et commande :<br/>
-> d2w pour effacer (d) 2 mots (w)
-<ul>
+	&gt; d2w pour effacer (d) 2 mots (w)</p>
 <p>
-la mise en buffer:
-'y' mets la ligne sous le curseur en buffer.
-'10y' en stocke 10.
-en utilisant p (ajout après) ou 'P' (ajout avant) ce(s) lignes pourront etre dupliquées
-'dd' supprime une ligne entière..
-'10d' en supprime 10
+<dl>
+	<h4> la mise en buffer:</h4>
+	<dt> &gt;y </dt><dd> met la ligne sous le curseur en buffer.</dd>
+	<dt> &gt;'10y' : en stocke 10.</li>
+	<dt> la commande p (ajout après) ou 'P' (ajout avant) duplique ce(s) lignes</li>
+	<dt> &gt;dd : supprime une ligne entière..</li>
+	<dt> &gt;10d : en supprime 10</li>
 oui mais elle(s) reste(nt) en 'mémoire'.
 en utilisant p (ajout après) ou 'P' (ajout avant) ces memes lignes peuvent etre réinsérées ou déplacées.
-<li></li>
-</ul>
+</dl>
 	</p>
 
     </div>

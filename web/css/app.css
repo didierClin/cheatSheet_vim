@@ -1,78 +1,161 @@
 * {
-	font-size: 1em;
-	color: #2243cc;
+  font-size: 1em;
+  color: #2243cc;
 }
-.logo{
-	display: inline-block;
-	float: left;
+body {
+  background-image: url('../img/vim_editor.gif');
+  background-position: 15px 50px;
+  background-repeat: no-repeat;
 }
-.menu{
-	display: inline;
-	list-style: none;
-	float: left;
-}
-li {
-	display: inline;
-	color: #000;
+nav {
+  display: inline-block;
+  list-style: none;
+  float: right;
 }
 h1 {
-	font-size: 2em;
-	color:	#277A0A;
+  font-size: 2em;
+  color: #277A0A;
 }
-section{
-	clear: both;
-	width: 80%
-	padding-top: 20px;
-	padding-bottom: 40px;
+section {
+  clear: both;
+  width: 80% padding-top: 20px;
+  padding-bottom: 40px;
 }
-.entete{
-	clear: both;
-	font-size: 2em;
-	text-align: center;
-	text-shadow: 2px 2px green;
-	width: 80%;
-	padding-top: 20px;
-	padding-bottom: 40px;
-	margin: auto;
-	height: auto;
-	display: block;
-	box-shadow: 6px 9px 2px blue;
-	border-radius: 5px;
-	background-color: #7ACC6A;
-}
-#MN{
-	color: #FFF;
-
-	margin: auto;
-	text-o
+.entete {
+  /*clear: both;
+	font-size: 2em;*/
+  text-align: center;
+  text-shadow: 2px 2px green;
+  width: 60%;
+  padding-top: 20px;
+  padding-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: auto;
+  display: block;
+  box-shadow: 6px 9px 2px blue;
+  border-radius: 5px;
+  background-color: #7ACC6A;
 }
 #imp {
-	text-align: center;
-	color: black;
-	border: 2px red solid;
-	background-color: #FF3300;
-	font-family: Comic Sans MS,arial ;
+  text-align: center;
+  color: black;
+  border: 2px red solid;
+  background-color: #FF3300;
+  font-family: Comic Sans MS, arial;
 }
-div{
-	border: 1px blue solid;
-	margin-top: auto;
-	background-color: #CCCCB2;
+div {
+  border: 1px blue solid;
+  margin-top: auto;
+  background-color: #CCCCB2;
+}
+a {
+  color: black;
 }
 
-a{
-	color: black;
-}
 /* pseudo format hover, active, */
-a:hover{
-	color: white;
-	text-decoration: none;
-}
-a:active{
 
+a:hover {
+  color: white;
+  text-decoration: none;
 }
+a:active {}
 a:focus {
-	background-color: #FFCC66:
+  background-color: #FFCC66:
 }
-a:visited{
-	color: #AAA;
+/*a:visited {
+  color: #AAA;
+}*/
+dt {
+  text-align: left;
+  margin-left: 12%;
+  margin-right: 30%;
+  color: white;
+  padding-left: 10px;
+  font-style: italic;
+}
+dd {
+  color: #60686f;
+  text-align: right;
+  margin-right: 10%;
+  margin-left: 35%;
+  padding-right: 10px;
+}
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  body {
+    background-color: white;
+  }
+  #header {
+    background-image: linear-gradient();
+  }
+  h1 {
+    font-size: 1.5em;
+  }
+  dt {
+    margin-left: 5%;
+    margin-right: 20%;
+    color: blue;
+    /* detect media width change*/
+    padding-left: 10px;
+  }
+  dd {
+    color: #60686f;
+    margin-right: 5%;
+    margin-left: 20%;
+  }
+}
+
+/* Responsive adapt Small Size*/
+
+@media screen and (max-width: 499px) {
+  * {
+    font-size: .97em;
+  }
+  body {
+    background: #ffffff;
+    /*Suppress backG-image*/
+  }
+  #header {
+    background-color: red;
+  }
+  .entete {
+    /*text-align: center;
+			/*text-shadow: 2px 2px darkgreen;*/
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    display: block;
+    box-shadow: 6px 9px 2px blue;
+    border-radius: 5px;
+    background-color: #7ACC6A;
+  }
+  nav {
+    display: block;
+  }
+  li {
+    list-style: none;
+    color: black;
+  }
+  h1 {
+    font-size: 1.2em;
+  }
+  dt {
+    margin-left: 5%;
+    margin-right: 20%;
+    color: black;
+    /* detect media width change*/
+    padding-left: 10px;
+  }
+  dd {
+    color: #60686f;
+    margin-right: 5%;
+    margin-left: 20%;
+  }
 }

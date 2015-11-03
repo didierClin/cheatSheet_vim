@@ -1,113 +1,150 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Vim L'editeur modal performant?</title>
-    <script type="text/javascript" src="js/app.js"></script>
-    <link href="web/css/app.css" rel="stylesheet" type="text/css"  />
-  </head>
-  <body>
-    <header class="logo">
-      <img src="web/img/vim_editor.gif" alt="logo de Vim"/>
-    </header>
+
+<head >
+  <meta charset="utf-8">
+  <title>Vim L'editeur modal performant?</title>
+  <script type="text/javascript" src="js/app.js"></script>
+  <link href="web/css/app.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <header id="top">
     <nav>
-        <ul class="menu">
-          <li><a href="#MN">Mode normal</a></li>
-          <li><a href="#MC">Mode commande</a></li>
-          <li><a href="#MI">Mode insertion</a></li>
-          <li><a href="#PV">Aller plus vite</a></li>
-          <li></li>
-        </ul>
+      <ul>
+        <li><a href="#MN">Mode normal</a></li>
+        <li><a href="#MC">Mode commande</a></li>
+        <li><a href="#MI">Mode insertion</a></li>
+        <li><a href="#PV">Aller plus vite</a></li>
+      </ul>
     </nav>
-
-    <section>
-        <p class="entete">
-             L'éditeur modal ultra-puissant !<br/>
-       </p>
-   <div>
-    <h2 id="MN">le mode normal :</h2>
-    <p>
-      C'est le mode par defaut à l'ouverture de vim. Il permet de se déplacer dans le fichier.
-      </p> 
-     <span id="imp">/!\ La touche 'echap' nous ramene dans ce mode.</span><br/>
-	    <h3>Naviguer dans le texte:</h3>
+    <h1 class="entete">
+      L'éditeur modal ultra-puissant !
+    </h1>
+  </header>
+  <section>
+    <div>
+      <h2 id="MN">le mode normal :</h2>
+      <p>
+        C'est le mode par defaut à l'ouverture de vim. Il permet de se déplacer dans le fichier.
+      </p>
+      <span id="imp">/!\ La touche 'echap' nous ramene dans ce mode.</span>
+      <br/>
+      <h3>Naviguer dans le texte:</h3>
       <dl>
-	      <dt>h, l </dt><dd> déplacement respectif à gauche ou a droite,</dd>
-	      <dt>j, k </dt><dd> déplacement respectif en haut ou vers le bas,<dd/>
-	      <dd>nb: les touches fleches haut, bas, gauche et droite ont les memes actions.</dd>
-	  <dt>gg </dt><dd> va au debut du texte, G : va à la fin du texte,</dd>
-	  <dt>0 </dt><dd> va au debut de la ligne, $ : va à la fin de la ligne,</dd>
-	  <dt>{ </dt><dd> va au début du paragraphe, } : va à la fin du paragraphe,</dd>
-        <dt>
-	<dt>w </dt><dd> avance d'un mot, b : recule d'un mot</dd>
-	<dt>e </dt><dd> avance jusqu'à la fin d'un mot, </dd>
+        <dt>h, l </dt>
+        <dd> déplacement respectif à gauche ou a droite,</dd>
+        <dt>j, k </dt>
+        <dd> déplacement respectif en haut ou vers le bas,
+          <dd/>
+          <dd>nb: les touches fleches haut, bas, gauche et droite ont les memes actions.</dd>
+          <dt>gg </dt>
+          <dd> va au debut du texte, G : va à la fin du texte,</dd>
+          <dt>0 </dt>
+          <dd> va au debut de la ligne, $ : va à la fin de la ligne,</dd>
+          <dt>{ </dt>
+          <dd> va au début du paragraphe, } : va à la fin du paragraphe,</dd>
+          <dt>
+          <dt>w </dt>
+          <dd> avance d'un mot, b : recule d'un mot</dd>
+          <dt>e </dt>
+          <dd> avance jusqu'à la fin d'un mot, </dd>
       </dl>
-    <h3>Effacement:</h3>
-	<dl>
-		<dt>x </dt><dd> supprime le caractère sous le curseur</dd>
-		<dt>X </dt><dd> supprime le caractère précedent le curseur,</dd>
-		<dt>d </dt><dd> supprime ..</dd>
-		<dt>dw </dt><dd> supprime le mot sous le curseur,</dd>
-		<dt>d$ </dt><dd> supprime depuis le curseur jusqu'en fin de ligne,</dd>
-      		<dt>d0 </dt><dd> supprime depuis le début de ligne jusqu'au curseur,</dd>
-	</dl>
-</div>
-  <div id="MC">
-    <h2>le mode commande :</h2>
-	<p>Dans ce mode on donne des instructions à Vim. Editer, sauvegarder, quitter,..</p>
-	<p>Pour saisir une commande, taper <em>':'</em> suivi d'une commande.</p>
-    les touches principales:
-    <dl>
-	    <dt>w </dt><dd> (write) Sauvegarde du fichier</dd>
-	    <dt>q </dt><dd> (quit)  quitter le fichier sans sauvegarde, une alerte</dd>
-      <dd> apparait si le fichier est modifié et nécessite une confirmation (!)</dd>
-      <dt>q! </dt><dd> forcer la sortie du fichier sans sauvegarde, evite une alerte </dd>
-      <dt>wq ou x </dt><dd> enregistrer le fichier et sortir de vim,</dd>
-      <dt>e mon_fich </dt><dd> éditer le fichier mon_fich, mon_fich sera créé si il n'existe pas,</dd>
-    </dl>
-</div>
-<div id="MI">
-    <h3>le mode insertion:</h3>
-	<p>permet d'inserer le texte et son formatage.<br/>
-	Méthodes pour entrer en mode insertion:</p>
-<dl>
-	<dt>i</dt><dd> on entre en mode 'Insertion' à l'emplacement actuel du curseur,</dd>
-	<dt>a</dt><dd> mode 'Append', le curseur avance d'un caratère, </dd>
-	<dt>A</dt><dd> mode 'Append', ajout en fin de ligne,</dd>
-	<dt>o</dt><dd> 'Append' ouvre une nouvelle ligne en dessous de la ligne actuelle,</dd>
-	<dt>O</dt><dd> 'Append' ouvre une nouvelle ligne au dessus de la ligne actuelle,</dd>
-	<dt>c</dt><dd> 'change'</dd>
-</dl>
-	</p>
-  </div>
-<div id="PV">
-    <h3>Aller plus Viiitttteeee!!!</h3>
-	<p>
-	Répéter la dernière commande:<br/>
-	'.' permet de reproduire la dernière commande.<br/>
-	&gt;dw supprime un mot complet, chaque appui sur la touche '.' va supprimer de nouveau un mot.</p>
-	<p>Associer les commandes:<br/>
-	&gt;xp : x pour supprimer un caractère, p pour le coller =&gt; xp inverse deux caractères</p>
-	<p>Associer les opérateurs et les mouvements:<br/>
-une commande peut etre précédée d'un nombre qui va multiplier l'effet de la commande.
-	&gt; '10w' va déplacer le curseur sur le dixième mot suivant.
-</p>
-<p>On peut associer opérateur mouvement et commande :<br/>
-	&gt; d2w pour effacer (d) 2 mots (w)</p>
-<p>
-<dl>
-	<h4> la mise en buffer:</h4>
-	<dt> &gt;y :</dt><dd> met la ligne sous le curseur en buffer.</dd>
-	<dt> &gt;'10y' :</dt><dd> place 10 lignes en buffer.</dd>
-	<dd> la commande p (ajout après) ou 'P' (ajout avant) duplique ce(s) lignes</dd>
-	<dt> &gt;dd :</dt><dd> supprime une ligne entière..</dd>
-	<dt> &gt;10d :</dt><dd> en supprime 10</dd>
-	<dd> ces lignes sont placées en mémoire.
-	<dd> utiliser p (ajout après) ou 'P' (ajout avant) pour les réinsérer ou déplacer.</dd>
-
-</dl>
-	</p>
-
+      <h3>Effacement:</h3>
+      <dl>
+        <dt>x </dt>
+        <dd> supprime le caractère sous le curseur</dd>
+        <dt>X </dt>
+        <dd> supprime le caractère précedent le curseur,</dd>
+        <dt>d </dt>
+        <dd> supprime ..</dd>
+        <dt>dw </dt>
+        <dd> supprime le mot sous le curseur,</dd>
+        <dt>d$ </dt>
+        <dd> supprime depuis le curseur jusqu'en fin de ligne,</dd>
+        <dt>d0 </dt>
+        <dd> supprime depuis le début de ligne jusqu'au curseur,</dd>
+      </dl>
     </div>
-  </body>
+    <a href="#top"><img src="web/img/top.png" alt="retour_haut" /></a>
+    <a href="#MN"><img src="web/img/vers-haut.png" alt="retour_precedent" /></a>
+    <a href="#PV"><img src="web/img/vers-bas.png" alt="suite" /></a>
+    <div id="MC">
+      <h2>le mode commande :</h2>
+      <p>Dans ce mode on donne des instructions à Vim. Editer, sauvegarder, quitter,..</p>
+      <p>Pour saisir une commande, taper
+        <em>':'</em> suivi d'une commande.</p>
+      les touches principales:
+      <dl>
+        <dt>w </dt>
+        <dd> (write) Sauvegarde du fichier</dd>
+        <dt>q </dt>
+        <dd> (quit) quitter le fichier sans sauvegarde, une alerte</dd>
+        <dd> apparait si le fichier est modifié et nécessite une confirmation (!)</dd>
+        <dt>q! </dt>
+        <dd> forcer la sortie du fichier sans sauvegarde, evite une alerte </dd>
+        <dt>wq ou x </dt>
+        <dd> enregistrer le fichier et sortir de vim,</dd>
+        <dt>e mon_fich </dt>
+        <dd> éditer le fichier mon_fich, mon_fich sera créé si il n'existe pas,</dd>
+      </dl>
+    </div>
+    <a href="#top"><img src="web/img/top.png" alt="retour_haut" /></a>
+    <a href="#MC"><img src="web/img/vers-haut.png" alt="retour_precedent" /></a>
+    <a href="#PV"><img src="web/img/vers-bas.png" alt="suite" /></a>
+    <div id="MI">
+      <h3>le mode insertion:</h3>
+      <p>permet d'inserer le texte et son formatage.
+        <br/> Méthodes pour entrer en mode insertion:</p>
+      <dl>
+        <dt>i</dt>
+        <dd> on entre en mode 'Insertion' à l'emplacement actuel du curseur,</dd>
+        <dt>a</dt>
+        <dd> mode 'Append', le curseur avance d'un caratère, </dd>
+        <dt>A</dt>
+        <dd> mode 'Append', ajout en fin de ligne,</dd>
+        <dt>o</dt>
+        <dd> 'Append' ouvre une nouvelle ligne en dessous de la ligne actuelle,</dd>
+        <dt>O</dt>
+        <dd> 'Append' ouvre une nouvelle ligne au dessus de la ligne actuelle,</dd>
+        <dt>c</dt>
+        <dd> 'change'</dd>
+      </dl>
+      </p>
+    </div>
+    <a href="#top"><img src="web/img/top.png" alt="retour_top" /></a>
+    <a href="#MI"><img src="web/img/vers-haut.png" alt="retour_precedent" /></a>
+    <div id="PV">
+      <h3>Aller plus Viiitttteeee!!!</h3>
+      <p>
+        <h4>Répéter la dernière commande:</h4>
+        '.' permet de reproduire la dernière commande.
+        <br/> &gt;dw supprime un mot complet, chaque appui sur la touche '.' va supprimer de nouveau un mot.</p>
+      <p>Associer les commandes:
+        <br/> &gt;xp : x pour supprimer un caractère, p pour le coller =&gt; xp inverse deux caractères</p>
+      <p>Associer les opérateurs et les mouvements:
+        <br/> une commande peut etre précédée d'un nombre qui va multiplier l'effet de la commande. &gt; '10w' va déplacer le curseur sur le dixième mot suivant.
+      </p>
+      <p>On peut associer opérateur, mouvement et commande :
+        <br/> &gt; d2w pour effacer (d) 2 mots (w)</p>
+      <p>
+        <dl>
+          <h4> la mise en buffer:</h4>
+          <dt> &gt;y :</dt>
+          <dd> met la ligne sous le curseur en buffer.</dd>
+          <dt> &gt;'10y' :</dt>
+          <dd> place 10 lignes en buffer.</dd>
+          <dd> la commande p (ajout après) ou 'P' (ajout avant) duplique ce(s) lignes</dd>
+          <dt> &gt;dd :</dt>
+          <dd> supprime une ligne entière..</dd>
+          <dt> &gt;10d :</dt>
+          <dd> en supprime 10</dd>
+          <dd> ces lignes sont placées en mémoire.
+          <dd> utiliser p (ajout après) ou 'P' (ajout avant) pour les réinsérer ou déplacer.</dd>
+        </dl>
+      </p>
+    </div>
+  </section>
+</body>
+
 </html>

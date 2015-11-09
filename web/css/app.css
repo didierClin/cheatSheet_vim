@@ -3,7 +3,9 @@
   color: #2243cc;
 }
 body {
+
   background-image: url('../img/vim_editor.gif');
+  background-color: blue;
   background-position: 15px 50px;
   background-repeat: no-repeat;
 }
@@ -18,7 +20,8 @@ h1 {
 }
 section {
   clear: both;
-  width: 80% padding-top: 20px;
+  width: 80%;
+  padding-top: 20px;
   padding-bottom: 40px;
 }
 .entete {

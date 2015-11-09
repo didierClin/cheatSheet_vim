@@ -1,11 +1,6 @@
 body {
-<<<<<<< HEAD
-
-=======
   clear: both;
->>>>>>> Semaine01
   background-image: url('../img/vim_editor.gif');
-  background-color: blue;
   background-position: 15px 50px;
   background-repeat: no-repeat;
   font-size: 1em;
@@ -27,11 +22,7 @@ h2{
 }
 section {
   clear: both;
-<<<<<<< HEAD
-  width: 80%;
-=======
   width: 100%;
->>>>>>> Semaine01
   padding-top: 20px;
   padding-bottom: 40px;
 }
@@ -84,7 +75,7 @@ dt {
   font-style: italic;
 }
 dd {
-  color: #60686f;
+  color: #3a434a;
   text-align: right;
   margin-right: 10%;  margin-left: 35%;
   padding-right: 10px;

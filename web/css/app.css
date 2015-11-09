@@ -47,8 +47,9 @@ section {
 #imp {
   text-align: center;
   color: black;
-  border: 2px red solid;
-  background-color: #FF3300;
+  border: 2px blue solid;
+  margin-left: 1em;
+  background-color: #2da115;
   font-family: Comic Sans MS, arial;
 }
 div {

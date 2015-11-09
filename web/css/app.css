@@ -1,24 +1,26 @@
-* {
-  font-size: 1em;
-  color: #2243cc;
-}
 body {
+  clear: both;
   background-image: url('../img/vim_editor.gif');
   background-position: 15px 50px;
   background-repeat: no-repeat;
+  font-size: 1em;
+  color: #2243cc;
 }
 nav {
-  display: inline-block;
-  list-style: none;
+  display: block;
   float: right;
 }
+li{
+  list-style: none;
+  }
 h1 {
   font-size: 2em;
   color: #277A0A;
 }
 section {
   clear: both;
-  width: 80% padding-top: 20px;
+  width: 100%;
+  padding-top: 20px;
   padding-bottom: 40px;
 }
 .entete {
@@ -54,33 +56,24 @@ div {
 a {
   color: black;
 }
-
 /* pseudo format hover, active, */
-
 a:hover {
-  color: white;
-  text-decoration: none;
+  color: green;  text-decoration: none;
 }
-a:active {}
 a:focus {
-  background-color: #FFCC66:
+background-color: #FFCC66;
 }
-/*a:visited {
-  color: #AAA;
-}*/
 dt {
   text-align: left;
-  margin-left: 12%;
-  margin-right: 30%;
-  color: white;
+  margin-left: 12%; margin-right: 30%;
+  color: green;
   padding-left: 10px;
   font-style: italic;
 }
 dd {
   color: #60686f;
   text-align: right;
-  margin-right: 10%;
-  margin-left: 35%;
+  margin-right: 10%;  margin-left: 35%;
   padding-right: 10px;
 }
 @media screen and (min-width: 500px) and (max-width: 800px) {
@@ -110,12 +103,10 @@ dd {
 /* Responsive adapt Small Size*/
 
 @media screen and (max-width: 499px) {
-  * {
-    font-size: .97em;
-  }
   body {
     background: #ffffff;
     /*Suppress backG-image*/
+    font-size: .97em;
   }
   #header {
     background-color: red;
@@ -138,10 +129,6 @@ dd {
   }
   nav {
     display: block;
-  }
-  li {
-    list-style: none;
-    color: black;
   }
   h1 {
     font-size: 1.2em;

@@ -17,6 +17,9 @@ h1 {
   font-size: 2em;
   color: #277A0A;
 }
+h2{
+  text-align: center;
+}
 section {
   clear: both;
   width: 100%;
@@ -52,6 +55,7 @@ div {
   border: 1px blue solid;
   margin-top: auto;
   background-color: #CCCCB2;
+  border-radius: 3%;
 }
 a {
   color: black;
